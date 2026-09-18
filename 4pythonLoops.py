@@ -6,7 +6,7 @@
 # A FOR loop is used to iterate over a sequence(like a list, tuple, dictionary, string or a range of numbers).
 
 # Syntax:
-# for variable in sequence:
+# for variable in sequence: 
     #Code block
 
 # example
@@ -133,7 +133,7 @@ for a in range(1,101):
         break
 '''
 
-# CONTINUE => skip the rest of the current loop iteration
+# CONTINUE => skip the rest of the current loop ITERATION
 # Example:
 '''
 for n in range(1,11):
