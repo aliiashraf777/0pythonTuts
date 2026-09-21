@@ -117,14 +117,14 @@ print("dictionary after dict.clear() running")
 # -----------------
 
 """ 
-In Python a set is an unordered collection data type that stores UNIQUE ELEMENTS. Setars are defined using curly braces {} or by using built-in set() function
+In Python a set is an unordered collection data type that stores UNIQUE ELEMENTS. Sets ars are defined using curly braces {} or by using built-in set() function
 - an unordered, mutable, collection of UNIQUE  ELEMENTS
 my_set={1,2,3,4,5}
 
 no duplicate values
 useful for membership testing
 """
-
+""" 
 set={1,2,3,4,5}
 print(set,type(set))
 
@@ -149,3 +149,89 @@ print(s4)
 print(s3)
 
 p5=s1.difference(s2)
+
+# DIFFERENCE in sets of python
+# provides those values which are not present in difference being checked by set
+s6=s1.difference(s2) #1,2 is output
+s7=s2.difference(s1) #4,5 is difference
+ """
+
+# ================================
+# PRACTICE QUESTIONS
+# ================================
+
+# Task01------
+# Count word frequency sentence = "python is fun and python is powerful"
+
+""" sentence="python is fun and python is powerful"
+list=sentence.split(" ") #['python','is',...]
+wordCount={}
+
+for word in list:
+    print(word)
+    wordCount[word]=wordCount.get(word,0)
+
+# wordCount['python]=0+1 wordCount={"python":1}
+# wordCount['is']=0+1 wordCont={'python':1,'is:1, 'fun':1}
+print(wordCount) """
+
+
+# TASK2-------
+# Swap key and values data={'a':1,'b':2,'c':3}
+
+""" 
+data={'a':1,'b':2,'c':3}
+finalAns={}
+
+for k,v in data.items():
+    print(k,v)
+    finalAns[v]=k
+print(finalAns)
+ """
+
+# TASK3-------
+# Sum All Values prices={'apple':100,'banana':40,'cherry':60}
+
+prices={'apple':100,'banana':40,'cherry':60}
+# allValues=prices.values()
+# print(sum(allValues))
+
+""" total=0
+for price in prices.values():
+    print(price)
+    total+=price
+print(total) """
+
+
+# TASK4-------
+# find key with Max Values cores={'Alice':50,'Bob':70,'Charlie':65}
+
+""" cores={'Alice':50,'Bob':70,'Charlie':65}
+
+maxValueKey=''
+maxValue=0
+
+for k,v in cores.items():
+    if v>maxValue:
+        maxValue=v
+        maxValueKey=k
+
+print(maxValueKey, maxValue) """
+
+
+# TASK5-------
+# Group by Length words=["cat","dog","apple","banana","to","on"]
+
+""" words=["cat","dog","apple","banana","to","on"]
+
+groupWord={}
+
+for v in words:
+    length=len(words)
+    if length not in groupWord:
+        groupWord[length]=[v]
+    else:
+        groupWord[length].append(v)
+print(groupWord) """
+
+
