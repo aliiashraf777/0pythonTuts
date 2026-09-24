@@ -119,14 +119,60 @@ def getAllEvenNum(list):
             finalList.append(a)
     return finalList 
 
+    # using list comprehension
+    # inside a list we run a loop and that too returns loop.
+    finalList=[a for a in range(1,11)]
+    finalList=[ n for n in list if n%2==0 ]
+    return finalList
+
 output=getAllEvenNum([10,20,30,40,50])
 print(output)
 
 """
 
-def getAllEvenNum(list):
-    for a in list:
-        if a%2==0:
-            print(a)
+# TASK 3:--------------
+# obtain a list that contains  elements obtained by sum of two corresponding elements of two lists.
+# list1=[1,2,3,4,5,6]
+# list2=[6,5,4,3,2,1]
+# result=[7,7,7,7,7,7]
 
-getAllEvenNum([10,20,30,40,50])
+""" def displayCombineList(list1,list2):
+    # finalList=[]
+    # for x,y in zip(list1,list2):
+    #     finalList.append(x+y)
+    # return finalList
+
+    # same output using list comprehension
+    finalList=[ x+y for x,y in zip(list1,list2)]
+    return finalList
+
+list1=[1,2,3,4,5,6]
+list2=[6,5,4,3,2,1]
+
+output=displayCombineList(list1,list2)
+print(output) """
+
+# TASK4:---------------
+# lst=['Ali','Ashraf','Mughalzada']
+# write program to obtain list of uppercase items from 1st list
+
+""" def changeInUpper(list):
+    finalList=[]
+    for x in list:
+        finalList.append(x.uppercase)
+    return finalList
+
+lst=['Ali','Ashraf','Mughalzada']
+changeInUpper(list) """
+
+
+# TASK5:---------------
+# lst=['Ali','Ashraf','Mughalzada']
+# write program to obtain list of uppercase items from 1st list
+
+def avgData(*allValue):
+    print(allValue)
+    avg=int(sum(allValue)/len(allValue))
+    return avg
+
+print(avgData(10,20,30,40,50))
